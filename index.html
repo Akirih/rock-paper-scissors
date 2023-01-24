@@ -1,0 +1,60 @@
+<script>
+
+function getComputerChoice (){
+    let cpu = Math.floor(Math.random()*3);
+    if (cpu === 0) return ("rock");
+    else if (cpu === 1) return("paper");
+    else return ("scissor");
+}
+
+function getPlayerChoice (round){
+    let player = undefined;
+    let regex = /^(rock|paper|scissor)$/i;
+    while (!regex.test(player)){    
+        player = prompt("ROUND " + round + " - Make your choice (rock/paper/scissor):");        
+    }
+    return player;
+}
+
+function playRound (player, cpu){
+    let playerLC = player.toLowerCase();
+    let cpuLC = cpu.toLowerCase();
+
+    // Test for Draw and Player Win conditions, else returns CPU win
+    if (playerLC === cpuLC){
+        alert("Draw");
+    }else if (
+        (playerLC === "rock" && cpuLC === "scissor") ||
+        (playerLC === "paper" && cpuLC === "rock") ||
+        (playerLC === "scissor" && cpuLC === "paper")
+        ){
+            alert ("Player Point");
+
+    }else {
+        alert ("CPU Point");
+    }
+
+}
+
+function playGame(){
+    let computerSelection;
+    let playerSelection;
+    for(i = 1; i <= 5; i++){
+        computerSelection = getComputerChoice();
+        playerSelection = getPlayerChoice(i);
+        playRound(playerSelection, computerSelection);
+
+        //console.log (computerSelection);
+        //console.log (playerSelection);
+    }
+}
+
+// Starting the game
+
+
+if (confirm("Play a BO5 Rock-Papper-Scissors?")) playGame();
+else alert("Too bad...");
+
+
+</script>
+
