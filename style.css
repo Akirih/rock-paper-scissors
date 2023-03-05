@@ -1,0 +1,111 @@
+/* Testing */
+
+* {
+    /* border: 1px solid red; */
+}
+
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+* {
+    font-family: 'DotGothic16', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+html {
+    background-color: gray;
+}
+
+/* High level content */
+
+
+#main-container {
+    background-color: darkgray;
+    text-align: center;
+    width: 400px;
+    max-height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.play-button {
+    margin-top: 30px;
+}
+
+.button {
+    color: black;
+}
+
+
+/* Inner content */
+
+
+#pre-game{
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-around;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#in-game{
+    height: 100%;
+    /* border: 1px solid blue; */
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#diamond-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.invisible{
+    display:none;
+}
+.visible {
+    display:flex;
+}
+
+
+
+
+
+/* Diamond Shape */
+
+.diamond-shape {
+    background: #fff;
+    height: 60px;
+    text-align: center;
+    transform:rotate(45deg);
+    width:60px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+.shape {
+  color: black;
+  display: table-cell;
+  height: 60px;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+  width:60px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.selected {
+    border: 1px solid black;
+}
