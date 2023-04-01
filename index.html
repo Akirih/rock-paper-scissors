@@ -3,82 +3,68 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+	<title>Rock-Paper-Scissors</title>
 </head>
-
 <body>
-
-    <div id="container">
-        <div id="header">
-            <header>
-                <h1>Rock Paper Scissor</h1>
-                <h2>The Odin Project: Foundations</h2>
-            </header>
-        </div>
-        <div id="main-container">
-            <div id="pre-game" class="visible">
-                <h1 id="start-game">START GAME</h1>
-            </div>
-            <div id="in-game" class="invisible">
-
-                <div class="main-top">
-                    <h3>CURRENT SCORE</h3>
-                    <p class="score">Player <span id="player-score">0</span> v <span id="cpu-score">0</span> CPU</p>
-                </div>
-                
-                <div class="main-mid">
-                    <h3>Choose your weapon!</h3>
-                    <div id="diamond-container">
-                        <div class="diamond-shape" data-rps="rock">
-                            <div class="shape">✊</div>
-                        </div>
-                        <div class="diamond-shape" data-rps="paper">
-                            <div class="shape">✋</div>
-                        </div>
-                        <div class="diamond-shape" data-rps="scissor">
-                            <div class="shape">✌️</div>                            
-                        </div>
-                    </div>
-                <div class="play-button"><button type="button"class="button">FIGHT</button></div>
-                </div>
-                
-
-            </div>
-        </div>
-        </div>
+    <h1>Rock Paper Scissors</h1>
+<div id="main">
+    <div id="before-game">
+        <input type="button" id="start-button" value="START GAME" class="started">
     </div>
+    <div id="during-game" class="hidden">
+        <div id="score-tracker">
+            <p>Current Scores</p>
+            <div id="player-score">
+                <p>Player</p>
+                <p id="pScore">0</p>
+            </div>
+            <div id="draw-score">
+                <p>Draws</p>
+                <p id="dScore">0</p>
+            </div>
+            <div id="cpu-score">
+                <p>CPU</p>
+                <p id="cScore">0</p>
+            </div>
+        </div>
+        <div  id="grid-container">
+            <div class="div1 side-select"><p>Player<br>Selection</p> </div>
+            <div class="div2">
+                <div class="selections selection-rock" data-rps="rock"><p>✊</p></div>
+                <div class="selections selection-paper" data-rps="paper"><p>✋</p></div>
+                <div class="selections selection-scissor" data-rps="scissor"><p>✌️</p></div>
+            </div>
+            <div class="div3 side-select"><p>CPU<br>Selection</p></div>
+            <div class="div4">
+                <div class="selection-cpu"><p>?</p></div>
+                <div class="selection-cpu"><p>?</p></div>
+                <div class="selection-cpu"><p>?</p></div>
+            </div>
+            <div class="div5"><img src="rps.png" alt="rules" id="rule-image"><p>First to 5 rounds Wins! <span id="battle-log"></span></p></div>
+            <div class="div6" id="battle-screen">
+                <div>
+                    <div id="playerEC" class="selection-empty"></div>
+                </div>
+                <div><p>VS</p></div>
+                <div>
+                    <div id="cpuEC" class="selection-empty"></div>
+                </div>                
+            </div>
+            <div class="div6b" id="score-screen"></div>
+            <div class="div7">
+                <input type="button" id="fight-button" value="Fight">
+                <p class="battle-logs" id="battle-log-button">View Battle Logs</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div><p>Copyright © Akirih 2023</p></div>
 
 </body>
 </html>
 
-<!-- ✋ ✌️ ✊ 
-
-
-            <div class="diamond-shape">
-                <div class="shape">99</div>
-            </div>
-
-
-                <div class="main-top">
-                    <h3>CURRENT SCORE</h3>
-                    <p class="score">0 v 0</p>
-                </div>
-                <div class="main-mid">
-                    <h3>Choose your weapon!</h3>
-                    <div class="diamond-container">
-                        <div class="diamond-shape option" data-rps="rock">
-                            <div class="shape">✊</div>
-                        </div>
-                        <div class="diamond-shape option" data-rps="paper">
-                            <div class="shape">✋</div>
-                        </div>
-                        <div class="diamond-shape option" data-rps="scissor">
-                            <div class="shape">✌️</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-bot"><button type="button"class="button">PLAY</button></div>
-
--->
+<!-- ✋ ✌️ ✊  -->
